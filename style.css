@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+}
+
+main {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(180deg, #af67e9 0%, #6565e7 100%);
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  width: 1000px;
+  min-height: 500px;
+  border-radius: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  top: 60%;
+  left: 6.5%;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.illustrations {
+  width: 600px;
+  margin-left: -25%;
+}
+
+.illustrations .woman {
+  min-height: 500px;
+  background: url(./images/bg-pattern-desktop.svg) no-repeat;
+  background-size: 850px;
+  background-position: 150% 65%;
+}
+
+.illustrations .woman .woman_desktop {
+  margin-top: 60px;
+}
+
+.illustrations .woman .woman_mobile {
+  display: none;
+}
+
+.FAQ {
+  width: 300px;
+}
+
+.FAQ h1 {
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: left;
+  color: #1d1e35;
+}
+
+.FAQ .accordion {
+  width: 370px;
+}
+
+.FAQ .accordion .title {
+  text-align: left;
+  padding: 12px 0;
+  color: #4a4b5e;
+  border-bottom: 1px solid #e7e7e9;
+  cursor: pointer;
+}
+
+.FAQ .accordion .title:hover {
+  color: #f47c57;
+}
+
+.FAQ .accordion .title span img {
+  position: absolute;
+  right: 120px;
+  font-size: 1.5rem;
+}
+
+.FAQ .accordion .accordion_content {
+  text-align: left;
+  padding: 12px 0;
+  display: none;
+}
+
+.FAQ .active .accordion_content {
+  height: 45px;
+  display: block;
+  color: #787887;
+}
+
+.FAQ .active span img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.FAQ .active .title {
+  font-weight: bold;
+  color: #1d1e35;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 325px;
+    height: 550px;
+    overflow: visible;
+  }
+  .box {
+    display: none;
+  }
+  .illustrations {
+    width: 325px;
+    margin-right: -5rem;
+  }
+  .illustrations .woman {
+    margin-top: 0rem;
+    margin-left: 1rem;
+    min-height: 0px;
+    background: url(./images/bg-pattern-mobile.svg) no-repeat;
+    background-size: 220px;
+    background-position: 46% 95%;
+  }
+  .illustrations .woman .woman_mobile {
+    display: inline-block;
+    margin-bottom: .8rem;
+  }
+  .illustrations .woman .woman_desktop {
+    display: none;
+  }
+  .FAQ {
+    width: 280px;
+    min-height: 500px;
+    margin-top: 3rem;
+  }
+  .FAQ h1 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+    color: #1d1e35;
+  }
+  .FAQ .accordion {
+    width: 290px;
+  }
+  .FAQ .accordion .title {
+    font-size: 14px;
+  }
+  .FAQ .accordion .title span img {
+    right: 15px;
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

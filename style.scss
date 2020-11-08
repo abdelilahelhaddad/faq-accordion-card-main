@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$dark-text: hsl(238, 29%, 16%);
+$light-text: hsl(240, 6%, 50%);
+$light-title: hsl(237, 12%, 33%);
+$hover-text: hsl(14, 88%, 65%);
+$border:hsl(240, 5%, 91%);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+}
+
+main{
+  position: relative;
+  background: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+  height: 100vh;
+}
+
+.container{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 1000px;
+  min-height: 500px;
+  border-radius: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.box{
+  position: absolute;
+  top: 60%;
+  left: 6.5%;
+  transform: translateY(-60%);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustrations{
+  width: 600px;
+  margin-left: -25%;
+  // overflow: hidden;
+  .woman{
+    min-height: 500px;
+    background: url(./images/bg-pattern-desktop.svg) no-repeat;
+    background-size: 850px;
+    background-position: 150% 65%;
+    .woman_desktop{
+      margin-top: 60px;
+    }
+    .woman_mobile{
+      display: none;
+    }
+  }
+}
+
+.FAQ{
+  width: 300px;
+  h1{
+    margin-bottom: 1.8rem;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: left;
+    color: $dark-text;
+  }
+  .accordion{
+    width: 370px;
+    .title{     
+      text-align: left;
+      padding: 12px 0;
+      color: $light-title;
+      border-bottom: 1px solid $border;
+      cursor: pointer;
+      &:hover{
+        color: $hover-text;
+      }
+      span img{
+        position: absolute;
+        right: 120px;
+        font-size: 1.5rem;
+      }
+    }
+    .accordion_content{
+      text-align: left;
+      padding: 12px 0;
+      display: none;
+    }
+  }
+  .active .accordion_content{
+    height: 45px;
+    display: block;
+    color: $light-text;
+  }
+  .active span img{
+    transform: rotate(180deg);
+  }
+  .active .title{
+    font-weight: bold;
+    color: $dark-text;
+  }
+}
+
+
+
+@media only screen and (max-width: 375px) {
+
+.container{
+  flex-direction: column;
+  width: 325px;
+  height: 550px;
+  overflow: visible;
+}
+
+.box{
+  display: none;
+}
+
+.illustrations{
+  width: 325px;
+  margin-right: -5rem;
+  .woman{
+    margin-top: 0rem;
+    margin-left: 1rem;
+    min-height: 0px;   
+    background: url(./images/bg-pattern-mobile.svg) no-repeat;
+    background-size: 220px;
+    background-position: 46% 95%;
+    .woman_mobile{
+      display: inline-block;
+      margin-bottom: .8rem;
+    }
+    .woman_desktop{
+      display: none;
+    }
+  }
+}
+
+.FAQ{
+  width: 280px;
+  min-height: 500px;
+  margin-top: 3rem;
+  h1{
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+    color: $dark-text;
+  }
+  .accordion{
+    width: 290px;
+    .title{
+      font-size: 14px;     
+      span img{
+        right: 15px;
+        font-size: 1.5rem;
+      }
+    }   
+  }
+}
+
+}
